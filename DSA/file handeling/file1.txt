@@ -1,0 +1,2 @@
+ the sorted list is :
+1 2 2 4 5 8 
