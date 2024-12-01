@@ -21,7 +21,7 @@ int main(){
     
 
     //build the binary tree 
-    while(q.empty()){
+    while(!q.empty()){
         Node* temp = q.front();
         q.pop();
         //left
@@ -34,7 +34,7 @@ int main(){
         }
         //right
         cout<<"Enter the right child : "<<endl;
-        cin>>right;
+        cin>>second;
         if(second!=-1){
             temp->right = new Node(second);
             q.push(temp->right);

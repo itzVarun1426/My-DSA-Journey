@@ -41,7 +41,7 @@ class Queue{
       }
       else {
         if(front == rear){
-        cout<<"\n poped "<<arr[front]<<"element"<<endl;
+        cout<<"\n poped "<<arr[front]<<"last element"<<endl;
           front = rear = -1;
         }
         else{

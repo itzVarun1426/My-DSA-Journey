@@ -12,9 +12,11 @@ class Node{
 };
 class Queue{
     Node *front ,*rear;
+    int size;
     public:
     Queue(){
         front = rear = NULL;
+        size = 0;
     }
     bool isEmpty(){
         return front == NULL;
@@ -22,19 +24,23 @@ class Queue{
     void push(int n){
         if(isEmpty()){
             front = rear = new Node(n);
+            size++;
             return ;
 
         }
         else{
             rear->next = new Node(n);
             rear = rear->next;
+            size++;
         }
     }
     void pop(){
         if(isEmpty()){
+            size--;
             cout<<"Queue is empty"<<endl;
         }
         else{
+            size--;
             Node * temp = front ;
             front = front->next;
             delete temp;
